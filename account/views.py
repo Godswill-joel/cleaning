@@ -23,12 +23,12 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
-        email = request.POST["email"]
-        password = request.POST["password"]
-        user = authenticate(request, email=email, password= password)
-        if user is not None:
-         login(request, user)
-         redirect("/")
-         messages.error(request,"invalid Email or Password")
-    return render (request, "account/login.html")
+       email = request.POST["email"]
+       password = request.POST["password"]
+       user = authenticate(request, email=email, password= password)
+       if user is not None:
+        login(request, user)
+        redirect("/")
+        messages.error(request, "invalid Email or Password")
+    return render (request, 'account/login.html')
 

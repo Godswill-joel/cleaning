@@ -10,8 +10,8 @@ def about (request):
 def contact (request):
     return render(request, 'contact.html')
 
-def portfolio (request):
-    return render(request, 'portfolio.html')
+def project (request):
+    return render(request, 'project.html')
 
 def service (request):
     return render(request, 'service.html')
