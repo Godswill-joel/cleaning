@@ -1,48 +1,74 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-    <form method="post" class='container bg-dark p-4 mt-5 text-white'>
-
-       
-        <h2 class='text-warning'>Register here</h2>
-        {% csrf_token %}
+ 
+<form>
+   <h2 class='text-warning' style color{black}>Register here</h2>
+    {% csrf_token %}
         
-        {% if form.errors %}
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Error!</strong> {{ form.errors }}.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+    {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+       <strong>Error!</strong> {{ form.errors }}.
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
             
-        {% endif %}
-            
-        <div class="form-group">
-            <label for="{{ form.full_name.label}}">{{ form.full_name.label}}</label>
+    {% endif %}
 
-            {{ form.full_name}}
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="{{form.username.label}}">{{form.username.label}}</label>
-            {{ form.username }}
-        </div>
-        <div class="form-group">
-            <label for="{{form.email.label}}">{{form.email.label}}</label>
-            {{ form.email }}
-        </div>
-        <div class="form-group">
-            <label for="{{ form.password1.label}}">{{ form.password1.label}}</label>
-            {{ form.password1 }}
-        </div>
-        <div class="form-group">
-            <label for="{{ form.password2.label }}">{{ form.password2.label }}</label>
-            {{ form.password2 }}
-        </div>
+  <div class="form-row">
+    <div class="col">FIRST NAME
+      <input type="text" class="form-control" placeholder="First name">{{ form.FIRST_name}}
+    </div>
+    <div class="col">LAST NAME
+      <input type="text" class="form-control" placeholder="Last name">{{ form.LAST_name}}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign up</button>
+</form>
 
-        <button type="submit" class="btn btn-outline-warning">Submit</button>
-    </form>
-
- <br>
 {% endblock content %}
