@@ -17,18 +17,18 @@ def register(request):
     context = {
         'form': form
     }
-    return render(request, 'account/register.html', context)
+    return render(request, "account/register.html", context)
 
 
 
-def login(request):
+def login_page(request):
     if request.method == 'POST':
        email = request.POST["email"]
        password = request.POST["password"]
        user = authenticate(request, email=email, password= password)
        if user is not None:
-        login(request, user)
+        login(request,user)
         redirect("/")
         messages.error(request, "invalid Email or Password")
-    return render (request, 'account/login.html')
+    return render (request, "account/login_page.html")
 
