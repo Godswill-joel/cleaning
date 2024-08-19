@@ -11,7 +11,7 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect ("/")
+            return redirect ("login")
     else:
         form = UserRegisterForm()
     context = {
@@ -28,7 +28,7 @@ def login_page(request):
        user = authenticate(request, email=email, password= password)
        if user is not None:
         login(request,user)
-        redirect("/")
+        redirect("project")
         messages.error(request, "invalid Email or Password")
     return render (request, "account/login_page.html")
 

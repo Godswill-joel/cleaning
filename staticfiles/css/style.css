@@ -479,6 +479,12 @@ a:focus {
   padding: 45px 0;
 }
 
+.about{
+  position: relative;
+  width: 100%;
+  padding: 45px 0 15px 0;
+}
+
 .about .about-img img {
   width: 100%;
   border-radius: 5px;

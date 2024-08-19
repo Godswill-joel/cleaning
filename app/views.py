@@ -1,18 +1,26 @@
 from django.shortcuts import render
-
+from project.models import Services
 # Create your views here.
+
 def index (request):
-    return render(request, 'index.html')
+    context = {}
+    return render(request, 'index.html', context)
 
 def about (request):
-    return render(request, 'about.html')
+    context = {}
+    return render(request, 'about.html', context)
 
 def contact (request):
-    return render(request, 'contact.html')
+    context = {}
+    return render(request, 'contact.html', context)
 
 def project (request):
-    return render(request, 'project.html')
+    context = {}
+    return render(request, 'project.html', context)
 
-def service (request):
-    return render(request, 'service.html')
+def service (request): 
+    context = {
+        'project' : Services.objects.all()
+    }
+    return render(request, 'service.html', context)
 

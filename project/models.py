@@ -27,10 +27,10 @@ class Category(models.Model):
 
 
 
-class Project(models.Model):
+class Services(models.Model):
     category = models.ForeignKey(
         "project.Category", 
-        verbose_name=("Project Categories"), 
+        verbose_name=("Services Categories"), 
            on_delete=models.CASCADE, null=True, blank=True
     )
     user = models.ForeignKey(User,  verbose_name=("User"), null= True, on_delete=models.SET_NULL)
