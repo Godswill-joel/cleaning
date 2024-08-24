@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from project.models import Services
+from project.models import Services,Post
 # Create your views here.
 
 def index (request):
@@ -24,3 +24,12 @@ def service (request):
     }
     return render(request, 'service.html', context)
 
+def blog (request):
+    context = {
+        'project': Post.objects.all()
+    }
+    return render(request, 'blog.html', context)
+
+def choose (request):
+    context = {}
+    return render(request, 'choose.html', context)

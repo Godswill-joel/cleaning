@@ -39,3 +39,21 @@ class Services(models.Model):
     description = models.TextField(null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
     image = models.ImageField(upload_to="media", null=True, blank=True)
+
+class Post(models.Model): 
+        category = models.ForeignKey(
+            "project.Category",
+            verbose_name= ("Post Category"), 
+             on_delete= models.CASCADE, blank=False, null=True
+        )
+        title = models.CharField(null=True, blank=False, max_length=30)
+        user = models.CharField(max_length=50, null=True, blank=True)
+        blog = models.TextField(null=True, blank=False)
+        date = models.DateTimeField(auto_now_add=True)
+        image = models.ImageField(upload_to="media", null=True, blank=True)
+
+       
+    
+        
+    
+        

@@ -1,4 +1,3 @@
-          
 {% load static %}      
 {% block content %}
 <!DOCTYPE html>
@@ -35,7 +34,7 @@
                         <div class="col-lg-3">
                             <div class="brand">
                                 <a href="index.html">
-                                    CleanMe
+                                    Dig Cleaning 
                                     <!-- <img src="img/logo.png" alt="Logo"> -->
                                 </a>
                             </div>
@@ -70,7 +69,7 @@
                                         <a href="{%url 'about' %}" class="nav-item nav-link">About</a>
                                         <a href="{%url 'service' %}" class="nav-item nav-link">Service</a>
                                         <a href="{% url 'project' %}" class="nav-item nav-link">Project</a>
-                                        <a href="single.html" class="nav-item nav-link">Single</a>
+                                        <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
                                         <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                                         <div class="nav-item dropdown">
                                             <a href="{% url 'register' %}" class="nav-link dropdown-toggle" data-toggle="dropdown">Register</a>
@@ -126,10 +125,10 @@
                             <div class="about-text">
                                 <h2><span>7</span> Years Experience</h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                    we are still in the competition of this business by the grace of God.
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                    we try our best to keep our work to the maximum Professionalism no matter.
                                 </p>
                                 <a class="btn" href="{% url 'about' %}">Learn More</a>
                             </div>
@@ -153,9 +152,9 @@
                                 <img src="{% static 'img/service-1.jpg' %}" alt="Service">
                                 <h3>Flour Cleaning</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                   
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <a class="btn" href="{% url 'service' %}">READ More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -163,9 +162,9 @@
                                 <img src="{% static 'img/service-2.jpg' %}" alt="Service">
                                 <h3>Glass Cleaning</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                   
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <a class="btn" href="{% url 'service' %}">READ More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -173,9 +172,9 @@
                                 <img src="{% static 'img/service-3.jpg' %}" alt="Service">
                                 <h3>Carpet Cleaning</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                    
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <a class="btn" href="{% url 'service' %}">READ More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -183,9 +182,9 @@
                                 <img src="{% static 'img/service-4.jpg' %}" alt="Service">
                                 <h3>Toilet Cleaning</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                   
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <a class="btn" href="{% url 'service' %}">READ More</a>
                             </div>
                         </div>
                     </div>
@@ -203,45 +202,8 @@
                                 <p>Why Choose Us</p>
                                 <h2>Expert Cleaners and World Class Services</h2>
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                            </p>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="row align-items-center feature-item">
-                                <div class="col-5">
-                                    <img src="{% static 'img/feature-1.jpg' %}" alt="Feature">
-                                </div>
-                                <div class="col-7">
-                                    <h3>Expert Cleaners</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row align-items-center feature-item">
-                                <div class="col-5">
-                                    <img src="{% static 'img/feature-2.jpg' %}" alt="Feature">
-                                </div>
-                                <div class="col-7">
-                                    <h3>Reasonable Prices</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row align-items-center feature-item">
-                                <div class="col-5">
-                                    <img src="{% static 'img/feature-3.jpg' %}" alt="Feature">
-                                </div>
-                                <div class="col-7">
-                                    <h3>Quick & Best Services</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
-                                    </p>
-                                </div>
-                            </div>
+                            <p> THE COMPANY HAS A LOT OF REASON WHY YOU SHOULD CHOOSE US, TO GET THE FULL LIST OR REASONS ON WHY WE SHOUD ME YOUR CONTRACTORS CLICK THE BUTTON BELOW THANK YOU.</p>
+                            <a class="btn" href="{% url 'choose' %}">READ </a>
                         </div>
                     </div>
                 </div>
@@ -249,89 +211,7 @@
             <!-- Feature End -->
             
             
-            <!-- Team Start -->
-            <div class="team">
-                <div class="container">
-                    <div class="section-header">
-                        <p>Team Member</p>
-                        <h2>Meet Our Expert Cleaners</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="{% static 'img/team-1.jpg' %}" alt="Team Image">
-                                </div>
-                                <div class="team-text">
-                                    <h2>Josh Dunn</h2>
-                                    <h3>CEO</h3>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="{% static 'img/team-2.jpg' %}" alt="Team Image">
-                                </div>
-                                <div class="team-text">
-                                    <h2>Mama chinedu</h2>
-                                    <h3>Team Manager</h3>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="{% static 'img/team-3.jpg' %}" alt="Team Image">
-                                </div>
-                                <div class="team-text">
-                                    <h2>omo ayehola</h2>
-                                    <h3>Cleaner</h3>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="{% static 'img/team-4.jpg' %}" alt="Team Image">
-                                </div>
-                                <div class="team-text">
-                                    <h2>akinbile adebajo</h2>
-                                    <h3>Cleaner</h3>
-                                    <div class="team-social">
-                                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team End -->
-
-
-            <!-- FAQs Start -->
+           <!-- FAQs Start -->
             <div class="faqs">
                 <div class="container">
                     <div class="row">
